@@ -1,0 +1,20 @@
+[package]
+name = "autovoice"
+version = "0.1.0"
+description = "irc moderation bot to auto-grant +v in a channel"
+authors = ["kpcyrd <git@rxv.cc>"]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/kpcyrd/autovoice"
+categories = ["command-line-utilities"]
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.69"
+clap = { version = "4.1.6", features = ["derive", "env"] }
+clap_complete = "4.1.2"
+env_logger = "0.10.0"
+fastrand = "1.9.0"
+futures = "0.3.26"
+irc = { version = "0.15.0", default-features = false, features = ["tls-rust"] }
+log = "0.4.17"
+tokio = { version = "1.25.0", features = ["macros", "rt-multi-thread"] }
